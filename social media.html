@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAPHETH RALPH NYADWERA - Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Basic styling for the navigation */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        position: fixed;
+        width: 90%;
+        top: 2px;
+        left: 5px;
+        background-color: burlywood;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #333;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #4e6bff;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: flex;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: all 0.3s;
+      }
+
+      /* Section styling */
+      section {
+        padding: 100px 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      #home {
+        background-color: #f9f9f9;
+      }
+
+      #about {
+        background-color: #eef2ff;
+      }
+
+      #portfolio {
+        background-color: #f0f8ff;
+      }
+
+      #services {
+        background-color: #fff5f5;
+      }
+
+      #contact {
+        background-color: #f5fff5;
+      }
+
+      .section-title {
+        font-size: 60px;
+        margin-bottom: 50px;
+        color: #333;
+      }
+
+      .section-content {
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 80px);
+          background-color: #fff;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: left 0.3s;
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .nav-links li {
+          margin: 15px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">MY PORTFOLIO</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT DETAILS</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+          <div class="section-content">
+            <h1 class="name">JAPHETH RALPH NYADWERA</h1>
+            <h2 class="title">Front-end Developer Expert</h2>
+            <p class="bio">
+              Enthusiastic and detailed-oriented web Developer currently
+              pursuing a degree in Information and Communication Technology at
+              Maseno University. Skilled in front-end and back-end Technologies
+              such as HTML, CSS, JavaScript, PHP, and MYSQL. Experienced in
+              building responsive websites and dynamic web applications with a
+              focus on clean code and user-friendly design. Passionate about
+              continuous learning and developing innovative solutions to
+              real-world problems.
+            </p>
+            <a
+              href="JAPHETH RALPH. CV.pdf"
+              download="JAPHETH RALPH. CV.pdf"
+              class="cv-button"
+              id="downloadCv"
+            >
+              Download CV
+            </a>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+          <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <p>
+              I'm pursuing Bachelor Of Science Information And Communication
+              Technology at Maseno University. I love building websites using
+              HTML, CSS, JS, PHP, MYSQL.
+            </p>
+            <div class="profile-image-container">
+              <img
+                src="image of japheth ralph.jpg"
+                alt="Japheth Ralph Nyadwera"
+                style="width: 200px; border-radius: 50%; margin-top: 20px"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+          <div class="section-content">
+            <h2 class="section-title">My Portfolio</h2>
+            <p>
+              Here are some of the project i've developed, one being student
+              biometric attendance system as a school project and got graded.
+            </p>
+            <!-- You can add project cards here -->
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+          <div class="section-content">
+            <h2 class="section-title">My Services</h2>
+            <p>
+              I offer front-end development, back-end support, responsive
+              design, and project consultation.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <div class="section-content">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Email: jnyadwera@yahoo.com | phone number +254758946742.</p>
+            <div class="social-media" style="margin-top: 30px">
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-youtube"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-linkedin"></i></a>
+              <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
