@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAPHETH RALPH NYADWERA - Portfolio</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Dark Theme Styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background-color: #121212; /* Dark background */
+        color: #e0e0e0; /* Light text */
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        position: fixed;
+        width: 90%;
+        top: 2px;
+        left: 5%;
+        background-color: #1e1e1e; /* Dark header */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        border-radius: 10px;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #e0e0e0;
+      }
+
+      .logo-highlight {
+        color: #4e6bff; /* Accent color */
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #e0e0e0;
+        font-weight: 500;
+        transition: color 0.3s;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover {
+        color: #4e6bff;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #e0e0e0;
+        margin: 5px 0;
+        transition: all 0.3s;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 150px 0 100px;
+      }
+
+      .hero-content {
+        max-width: 600px;
+      }
+
+      .name {
+        font-size: 48px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 500;
+        color: #4e6bff;
+        margin-bottom: 20px;
+      }
+
+      .bio {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #b0b0b0;
+        margin-bottom: 30px;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .cv-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 24px;
+        background-color: #4e6bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cv-button:hover {
+        background-color: #3a56d4;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(78, 107, 255, 0.3);
+      }
+
+      .cv-button i {
+        margin-left: 8px;
+      }
+
+      /* Profile Image */
+      .profile-image-container {
+        position: relative;
+      }
+
+      .image-wrapper {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #2d2d2d;
+      }
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+      }
+
+      .image-border {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid #4e6bff;
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      /* Social Media */
+      .social-media {
+        position: fixed;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .social-icon {
+        color: #b0b0b0;
+        font-size: 24px;
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        color: #4e6bff;
+        transform: translateY(-3px);
+      }
+
+      /* Section styling */
+      section {
+        padding: 100px 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      #home {
+        background-color: #121212;
+      }
+
+      #about {
+        background-color: #1a1a1a;
+      }
+
+      #portfolio {
+        background-color: #121212;
+      }
+
+      #services {
+        background-color: #1a1a1a;
+      }
+
+      #contact {
+        background-color: #121212;
+      }
+
+      .section-title {
+        font-size: 48px;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
+
+      .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .section-content p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #b0b0b0;
+        margin-bottom: 30px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 992px) {
+        .hero {
+          flex-direction: column-reverse;
+          text-align: center;
+          padding: 120px 0 60px;
+        }
+
+        .hero-content {
+          margin-top: 50px;
+        }
+
+        .image-wrapper {
+          width: 280px;
+          height: 280px;
+        }
+
+        .social-media {
+          position: static;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 40px;
+          transform: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 80px);
+          background-color: #1e1e1e;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: left 0.3s;
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .nav-links li {
+          margin: 15px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .name {
+          font-size: 36px;
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .section-title {
+          font-size: 36px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .image-wrapper {
+          width: 220px;
+          height: 220px;
+        }
+
+        .name {
+          font-size: 30px;
+        }
+
+        .title {
+          font-size: 18px;
+        }
+
+        .section-title {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <span class="logo-highlight">JRN</span>PORTFOLIO
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+          <div class="hero-content">
+            <h1 class="name">JAPHETH RALPH NYADWERA</h1>
+            <h2 class="title">Front-end Developer Expert</h2>
+            <p class="bio">
+              Enthusiastic and detailed-oriented web Developer currently
+              pursuing a degree in Information and Communication Technology at
+              Maseno University. Skilled in front-end and back-end Technologies
+              such as HTML, CSS, JavaScript, PHP, and MYSQL. Experienced in
+              building responsive websites and dynamic web applications with a
+              focus on clean code and user-friendly design. Passionate about
+              continuous learning and developing innovative solutions to
+              real-world problems.
+            </p>
+            <div class="action-buttons">
+              <a href="JAPHETH RALPH. CV.pdf" download="JAPHETH RALPH. CV.pdf" class="cv-button">
+                Download CV <i class='bx bx-download'></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="profile-image-container">
+            <div class="image-wrapper">
+              <img src="image/image of japheth ralph.jpg" alt="Japheth Ralph Nyadwera" class="profile-image" />
+              <div class="image-border"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+          <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <p>
+              I'm pursuing Bachelor Of Science Information And Communication
+              Technology at Maseno University. I love building websites using
+              HTML, CSS, JS, PHP, MYSQL.
+            </p>
+            <div class="profile-image-container">
+              <div class="image-wrapper" style="margin: 0 auto;">
+                <img src="image/image of japheth ralph.jpg" alt="Japheth Ralph Nyadwera" class="profile-image" />
+                <div class="image-border"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+          <div class="section-content">
+            <h2 class="section-title">My Portfolio</h2>
+            <p>
+              Here are some of the project i've developed, one being student
+              biometric attendance system as a school project and got graded.
+            </p>
+            <!-- You can add project cards here -->
+          </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+          <div class="section-content">
+            <h2 class="section-title">My Services</h2>
+            <p>
+              I offer front-end development, back-end support, responsive
+              design, and project consultation.
+            </p>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <div class="section-content">
+            <h2 class="section-title">Contact Me</h2>
+            <p>Email: jnyadwera@yahoo.com | phone number +254758946742.</p>
+            <div class="social-media">
+              <a href="https://x.com/nyadwera_ralph?t=6qBoSEmMitjlYWrtJizzsA&s=09" target="_blank" class="social-icon"><i class="bx bxl-twitter"></i></a>
+              <a href="https://youtube.com/@japhethralph?si=a212tD4l-zY_Uwuu" target="_blank" class="social-icon"><i class="bx bxl-youtube"></i></a>
+              <a href="https://www.instagram.com/ralph.japheth?igsh=YzljYTk1ODg3Zg==" target="_blank" class="social-icon"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/japheth-ralph-nyadwera-23406a2b5" target="_blank" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.facebook.com/japheth.ralp.3" target="_blank" class="social-icon"><i class="bx bxl-facebook-circle"></i></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
